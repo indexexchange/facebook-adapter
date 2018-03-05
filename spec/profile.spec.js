@@ -57,7 +57,7 @@ describe('Partner Profile', function () {
                 },
                 statsId: {
                     type: 'string',
-                    eq: 'FBX'
+                    eq: 'FB'
                 },
                 version: {
                     type: 'string'
@@ -102,7 +102,7 @@ describe('Partner Profile', function () {
                                 if (targetingSplit[0] !== 'ix' ||
                                     targetingSplit[1] !== profile.statsId.toLowerCase() ||
                                     targetingSplit[2] !== 'id') {
-                                    this.report('id tageting key should be of the format ix_{FBX}_id')
+                                    this.report('id tageting key should be of the format ix_{FB}_id')
                                 }
                             }
                         },
@@ -114,7 +114,7 @@ describe('Partner Profile', function () {
                                 if (targetingSplit[0] !== 'ix' ||
                                     targetingSplit[1] !== profile.statsId.toLowerCase() ||
                                     targetingSplit[2] !== 'cpm') {
-                                    this.report('om tageting key should be of the format ix_FBX_cpm')
+                                    this.report('om tageting key should be of the format ix_FB_cpm')
                                 }
                             }
                         },
@@ -126,7 +126,7 @@ describe('Partner Profile', function () {
                                 if (targetingSplit[0] !== 'ix' ||
                                     targetingSplit[1] !== profile.statsId.toLowerCase() ||
                                     targetingSplit[2] !== 'cpm') {
-                                    this.report('pm tageting key should be of the format ix_FBX_cpm')
+                                    this.report('pm tageting key should be of the format ix_FB_cpm')
                                 }
                             }
                         },
@@ -138,7 +138,7 @@ describe('Partner Profile', function () {
                                 if (targetingSplit[0] !== 'ix' ||
                                     targetingSplit[1] !== profile.statsId.toLowerCase() ||
                                     targetingSplit[2] !== 'dealid') {
-                                    this.report('pmid tageting key should be of the format ix_FBX_dealid')
+                                    this.report('pmid tageting key should be of the format ix_FB_dealid')
                                 }
                             }
                         }
