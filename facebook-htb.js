@@ -116,7 +116,8 @@ function FacebookHtb(configs) {
         var queryObj = {
             sdk: '5.5.web',
             placementids: [],
-            adformats: []
+            adformats: [],
+            cb: System.generateUniqueId(56, 'ALPHANUM')  // cachebuster
         };
 
         for (var i = 0; i < returnParcels.length; i++) {
