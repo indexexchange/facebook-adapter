@@ -382,30 +382,17 @@ function FacebookHtb(configs) {
     var derivedClass = {
         /* Class Information
          * ---------------------------------- */
-
-        //? if (DEBUG) {
         __type__: 'FacebookHtb',
-        //? }
-
-        //? if (TEST) {
         __baseClass: __baseClass,
-        //? }
 
         /* Data
          * ---------------------------------- */
-
-        //? if (TEST) {
-        __profile: __profile,
-        __baseUrl: __baseUrl,
-        //? }
+        profile: __profile,
 
         /* Functions
          * ---------------------------------- */
-
-        //? if (TEST) {
-        __render: __render,
-        __parseResponse: __parseResponse
-            //? }
+        parseResponse: __parseResponse,
+        generateRequestObj: __generateRequestObj,
     };
 
     return Classify.derive(__baseClass, derivedClass);

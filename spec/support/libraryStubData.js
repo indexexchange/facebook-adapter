@@ -136,6 +136,9 @@ var libraryStubData = {
         },
     },
     'scribe.js': {
+        warn: function () {
+            return;
+        },
         info: function () {
             return;
         },
