@@ -1,27 +1,18 @@
 {
     "timeout": 1000,
     "xSlots": {
-        "1": {
-            "placementId": "54321",
-            "sizes": [
-                [300, 250]
-            ]
-        },
-        "2": {
+        "xSlot1": {
             "placementId": "12345",
-            "sizes": [
-                [300, 600]
-            ]
+            "size": [300, 250]
         },
-        "3": {
-            "placementId": "654321",
-            "sizes": [
-                [728, 90]
-            ]
+        "xSlot2": {
+            "placementId": "54321",
+            "size": [300, 250],
+            "adFormat": "fullwidth"
         }
     },
     "mapping": {
-        "htSlot1": ["1", "2"],
-        "htSlot2": ["3"]
+        "htSlot1": ["xSlot1"],
+        "htSlot2": ["xSlot2"]
     }
 }

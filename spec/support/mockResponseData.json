@@ -1,5 +1,22 @@
 {
-    "bid": [],
-    "pass": [],
-    "deals": []
+    "bids": {
+        "bids": {
+            "12345": [{
+                "placement_id": "12345",
+                "bid_price_cents": 1.2345,
+                "bid_id": "BID_12345"
+            }],
+            "54321": [{
+                "placement_id": "54321",
+                "bid_price_cents": 5.4321,
+                "bid_id": "BID_54321"
+            }]
+        }
+    },
+    "pass": {
+        "bids": {
+            "12345": [],
+            "54321": []
+        }
+    }
 }

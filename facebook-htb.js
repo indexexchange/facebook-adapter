@@ -44,6 +44,7 @@ var Scribe = require('scribe.js');
  * @class
  */
 function FacebookHtb(configs) {
+    const adapterVersion = '2.1.0'; // bump this on each commit to this adapter
 
     /* Facebook endpoint only works with AJAX */
     if (!Network.isXhrSupported()) {
@@ -116,7 +117,10 @@ function FacebookHtb(configs) {
         var queryObj = {
             sdk: '5.5.web',
             placementids: [],
-            adformats: []
+            adformats: [],
+            cachebuster: System.generateUniqueId(56, 'ALPHANUM'),
+            platform: '2061185240785516',
+            adapterver: adapterVersion
         };
 
         for (var i = 0; i < returnParcels.length; i++) {
@@ -306,7 +310,7 @@ function FacebookHtb(configs) {
             partnerId: 'FacebookHtb',
             namespace: 'FacebookHtb',
             statsId: 'FB',
-            version: '2.1.0',
+            version: adapterVersion,
             targetingType: 'slot',
             enabledAnalytics: {
                 requestTime: true
@@ -382,30 +386,17 @@ function FacebookHtb(configs) {
     var derivedClass = {
         /* Class Information
          * ---------------------------------- */
-
-        //? if (DEBUG) {
         __type__: 'FacebookHtb',
-        //? }
-
-        //? if (TEST) {
         __baseClass: __baseClass,
-        //? }
 
         /* Data
          * ---------------------------------- */
-
-        //? if (TEST) {
-        __profile: __profile,
-        __baseUrl: __baseUrl,
-        //? }
+        profile: __profile,
 
         /* Functions
          * ---------------------------------- */
-
-        //? if (TEST) {
-        __render: __render,
-        __parseResponse: __parseResponse
-            //? }
+        parseResponse: __parseResponse,
+        generateRequestObj: __generateRequestObj,
     };
 
     return Classify.derive(__baseClass, derivedClass);
