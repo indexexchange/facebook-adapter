@@ -44,7 +44,7 @@ var Scribe = require('scribe.js');
  * @class
  */
 function FacebookHtb(configs) {
-    const adapterVersion = '2.1.0'; // bump this on each commit to this adapter
+    var adapterVersion = '2.1.0'; // bump this on each commit to this adapter
 
     /* Facebook endpoint only works with AJAX */
     if (!Network.isXhrSupported()) {
